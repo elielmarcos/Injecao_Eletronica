@@ -1,0 +1,1640 @@
+HI-TECH Software C Compiler 
+
+Linker command line:
+
+\
+  --edf=C:\Program Files (x86)\HI-TECH Software\PICC-18\PRO\9.63\dat\en_msgs.txt \
+  -cs -h+dist/default/production\Injecao_Elet_firmware.X.production.sym -z \
+  -Q18F4620 -ol.obj \
+  -Mdist/default/production/Injecao_Elet_firmware.X.production.map -E1 \
+  -ACODE=00h-0FFFFh -ACONST=00h-0FFFFh -ASMALLCONST=01000h-010FFhx240 \
+  -AMEDIUMCONST=01000h-0FFFFh -ARAM=00h-0FFhx15,0F00h-0F7Fh \
+  -ABIGRAM=00h-0F7Fh -ACOMRAM=00h-07Fh -AABS1=00h-0F7Fh -ABANK0=00h-0FFh \
+  -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh -ABANK3=0300h-03FFh \
+  -ABANK4=0400h-04FFh -ABANK5=0500h-05FFh -ABANK6=0600h-06FFh \
+  -ABANK7=0700h-07FFh -ABANK8=0800h-08FFh -ABANK9=0900h-09FFh \
+  -ABANK10=0A00h-0AFFh -ABANK11=0B00h-0BFFh -ABANK12=0C00h-0CFFh \
+  -ABANK13=0D00h-0DFFh -ABANK14=0E00h-0EFFh -ABANK15=0F00h-0F7Fh \
+  -ANVRAM=0F00h-0F7Fh \
+  -preset_vec=00h,intcode=08h,intcodelo=018h,powerup,init,end_init \
+  -pramtop=01000h -psmallconst=SMALLCONST -pmediumconst=MEDIUMCONST \
+  -pconst=CONST -pparam4=BANK4 -AFARRAM=00h-00h -ACONFIG=0300000h-030000Dh \
+  -pconfig=CONFIG -AIDLOC=0200000h-0200007h -pidloc=IDLOC \
+  -AEEDATA=0F00000h-0F003FFh -peeprom_data=EEDATA \
+  -prdata=COMRAM,nvrram=COMRAM,nvbit=COMRAM,rbss=COMRAM,rbit=COMRAM \
+  -pfarbss=FARRAM,fardata=FARRAM \
+  -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
+  -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE \
+  C:\Users\ELIELM~1\AppData\Local\Temp\sbic.obj \
+  dist/default/production\Injecao_Elet_firmware.X.production.obj 
+
+Object code version is 3.10
+
+Machine type is 18F4620
+
+Call graph: (short form)
+
+*_main size 0,1 offset 0
+     _inicializa_sistema size 0,4 offset 1
+         _SETUP size 0,1 offset 5
+         _inicializa_lcd size 0,1 offset 5
+             _Delay_Ms size 2,0 offset 7
+                 _Delay_Us size 2,0 offset 19
+             _comando_lcd size 1,0 offset 13
+                 _envia_dados_lcd size 1,4 offset 14
+                     _Delay_Us size 2,0 offset 19
+             _limpa_lcd size 0,1 offset 6
+                 _envia_dados_lcd size 1,4 offset 14
+                 _Delay_Ms size 2,0 offset 7
+             _linha1_lcd size 0,1 offset 6
+                 _comando_lcd size 1,0 offset 13
+         _limpa_lcd size 0,1 offset 6
+         _ler_eeprom size 2,2 offset 5
+         ___lmul size 8,4 offset 12
+         ___aldiv size 8,7 offset 12
+         _Delay_Ms size 2,0 offset 7
+         _VALOR_ADC size 4,8 offset 5
+             _Delay_Us size 2,0 offset 19
+         ___lwdiv size 4,4 offset 5
+     _ALERTA_MENU size 0,1 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+             _caracter_lcd size 1,0 offset 12
+                 _envia_dados_lcd size 1,4 offset 14
+         _linha2_lcd size 0,1 offset 12
+             _comando_lcd size 1,0 offset 13
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _Botao_ENT size 0,0 offset 3
+             _Beep_Simples size 0,2 offset 4
+                 _Delay_Us size 2,0 offset 19
+         _Botao_CNL size 0,0 offset 3
+             _Beep_Simples size 0,2 offset 4
+         _Botao_DEC size 0,0 offset 3
+             _Beep_Simples size 0,2 offset 4
+         _Botao_INC size 0,0 offset 3
+             _Beep_Simples size 0,2 offset 4
+         _Beep_Alerta size 0,2 offset 2
+             _Delay_Ms size 2,0 offset 7
+             _Delay_Us size 2,0 offset 19
+     _MENU_01 size 0,2 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _Simbolos_lcd size 2,1 offset 3
+             _comando_lcd size 1,0 offset 13
+             _caracter_lcd size 1,0 offset 12
+         _xy_lcd size 2,2 offset 3
+             _comando_lcd size 1,0 offset 13
+         _caracter_lcd size 1,0 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _linha2_lcd size 0,1 offset 12
+     _Botao_DEC size 0,0 offset 3
+     _Botao_INC size 0,0 offset 3
+     _MENU_02 size 0,2 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _Simbolos_lcd size 2,1 offset 3
+         _xy_lcd size 2,2 offset 3
+     _MENU_03 size 0,2 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _Simbolos_lcd size 2,1 offset 3
+         _xy_lcd size 2,2 offset 3
+*    _MENU_04 size 0,0 offset 1
+         _Grava_CGRAM size 0,1 offset 1
+             _comando_lcd size 1,0 offset 13
+             _caracter_lcd size 1,0 offset 12
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _separa_unidades size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _linha2_lcd size 0,1 offset 12
+*        _Grafico size 8,3 offset 1
+             ___lmul size 8,4 offset 12
+*            ___aldiv size 8,7 offset 12
+             _linha2_lcd size 0,1 offset 12
+             _caracter_lcd size 1,0 offset 12
+     _MENU_05 size 0,2 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _linha2_lcd size 0,1 offset 12
+         _Simbolos_lcd size 2,1 offset 3
+         _xy_lcd size 2,2 offset 3
+     _MENU_06 size 0,0 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _linha2_lcd size 0,1 offset 12
+     _MENU_07 size 0,2 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _separa_unidades size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _Simbolos_lcd size 2,1 offset 3
+         _xy_lcd size 2,2 offset 3
+     _MENU_08 size 0,0 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _separa_unidades size 4,1 offset 3
+         _texto_lcd size 2,0 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _linha2_lcd size 0,1 offset 12
+     _MENU_09 size 0,0 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+     _Botao_ENT size 0,0 offset 3
+     _MENU_21 size 0,0 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+     _Botao_CNL size 0,0 offset 3
+     _MENU_22 size 0,0 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+     _MENU_23 size 0,2 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _Simbolos_lcd size 2,1 offset 3
+         _xy_lcd size 2,2 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _linha2_lcd size 0,1 offset 12
+     _MENU_24 size 0,2 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _Simbolos_lcd size 2,1 offset 3
+         _xy_lcd size 2,2 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _linha2_lcd size 0,1 offset 12
+     _MENU_25 size 0,1 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+     _MENU_26 size 0,2 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _Simbolos_lcd size 2,1 offset 3
+         _xy_lcd size 2,2 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+     _MENU_27 size 0,0 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _separa_unidades size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+     _MENU_28 size 0,0 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+     _MENU_29 size 0,1 offset 1
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+*    _MENU_41 size 0,1 offset 1
+         _Botao_INC size 0,0 offset 3
+         _Botao_DEC size 0,0 offset 3
+         _Botao_CNL size 0,0 offset 3
+         _ler_eeprom size 2,2 offset 5
+         _Botao_ENT size 0,0 offset 3
+         _escrever_eeprom size 3,0 offset 3
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+         ___lmul size 8,4 offset 12
+*        ___aldiv size 8,7 offset 12
+*    _MENU_42 size 0,1 offset 1
+         _Botao_INC size 0,0 offset 3
+         _Botao_INC_Auto size 0,1 offset 3
+             _Beep_Simples size 0,2 offset 4
+         _Botao_DEC size 0,0 offset 3
+         _Botao_DEC_Auto size 0,1 offset 3
+             _Beep_Simples size 0,2 offset 4
+         _Botao_CNL size 0,0 offset 3
+         _ler_eeprom size 2,2 offset 5
+         _Botao_ENT size 0,0 offset 3
+         _escrever_eeprom size 3,0 offset 3
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+         ___lmul size 8,4 offset 12
+*        ___aldiv size 8,7 offset 12
+*    _MENU_43 size 0,2 offset 1
+         _Botao_INC size 0,0 offset 3
+         _Botao_DEC size 0,0 offset 3
+         _Botao_CNL size 0,0 offset 3
+         _ler_eeprom size 2,2 offset 5
+         _Botao_ENT size 0,0 offset 3
+         _escrever_eeprom size 3,0 offset 3
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _Simbolos_lcd size 2,1 offset 3
+         _xy_lcd size 2,2 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _linha2_lcd size 0,1 offset 12
+         ___lmul size 8,4 offset 12
+*        ___aldiv size 8,7 offset 12
+     _MENU_44 size 0,2 offset 1
+         _Botao_INC size 0,0 offset 3
+         _Botao_DEC size 0,0 offset 3
+         _Botao_CNL size 0,0 offset 3
+         _ler_eeprom size 2,2 offset 5
+         _Botao_ENT size 0,0 offset 3
+         _escrever_eeprom size 3,0 offset 3
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _Simbolos_lcd size 2,1 offset 3
+         _xy_lcd size 2,2 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _linha2_lcd size 0,1 offset 12
+     _MENU_45 size 0,1 offset 1
+         _Botao_INC size 0,0 offset 3
+         _Botao_INC_Auto size 0,1 offset 3
+         _Botao_DEC size 0,0 offset 3
+         _Botao_DEC_Auto size 0,1 offset 3
+         _Botao_CNL size 0,0 offset 3
+         _ler_eeprom size 2,2 offset 5
+         _Botao_ENT size 0,0 offset 3
+         _escrever_eeprom size 3,0 offset 3
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+*    _MENU_46 size 0,2 offset 1
+         _Botao_INC size 0,0 offset 3
+         _Botao_INC_Auto size 0,1 offset 3
+         _Botao_DEC size 0,0 offset 3
+         _Botao_DEC_Auto size 0,1 offset 3
+         _Botao_CNL size 0,0 offset 3
+         _ler_eeprom size 2,2 offset 5
+         _Botao_ENT size 0,0 offset 3
+         _escrever_eeprom size 3,0 offset 3
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _Simbolos_lcd size 2,1 offset 3
+         _xy_lcd size 2,2 offset 3
+         _caracter_lcd size 1,0 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         ___lmul size 8,4 offset 12
+*        ___aldiv size 8,7 offset 12
+     _MENU_47 size 0,1 offset 1
+         _Botao_INC size 0,0 offset 3
+         _Botao_INC_Auto size 0,1 offset 3
+         _Botao_DEC size 0,0 offset 3
+         _Botao_DEC_Auto size 0,1 offset 3
+         _Botao_CNL size 0,0 offset 3
+         _ler_eeprom size 2,2 offset 5
+         _Botao_ENT size 0,0 offset 3
+         _escrever_eeprom size 3,0 offset 3
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _separa_unidades size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+     _MENU_48 size 0,1 offset 1
+         _Botao_INC size 0,0 offset 3
+         _Botao_DEC size 0,0 offset 3
+         _Botao_CNL size 0,0 offset 3
+         _ler_eeprom size 2,2 offset 5
+         _Botao_ENT size 0,0 offset 3
+         _escrever_eeprom size 3,0 offset 3
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+     _MENU_49 size 0,1 offset 1
+         _Botao_INC size 0,0 offset 3
+         _Botao_INC_Auto size 0,1 offset 3
+         _Botao_DEC size 0,0 offset 3
+         _Botao_DEC_Auto size 0,1 offset 3
+         _Botao_CNL size 0,0 offset 3
+         _ler_eeprom size 2,2 offset 5
+         _Botao_ENT size 0,0 offset 3
+         _escrever_eeprom size 3,0 offset 3
+         _linha1_lcd size 0,1 offset 6
+         _texto_lcd size 2,0 offset 3
+         _linha2_lcd size 0,1 offset 12
+         _separa_unidades_SZ size 4,1 offset 3
+         _caracter_lcd size 1,0 offset 12
+
+Estimated maximum call depth: 5
+
+*intlevel2 size 0,0 offset 27
+*    _my_isr size 0,54 offset 27
+         i2___aldiv size 8,7 offset 81
+         i2___lmul size 8,4 offset 81
+         ___altoft size 4,9 offset 81
+             ___ftpack size 3,3 offset 94
+             ___ftneg size 3,0 offset 94
+         ___awtoft size 3,4 offset 81
+             ___ftpack size 3,3 offset 94
+             ___ftneg size 3,0 offset 94
+*        ___ftmul size 6,7 offset 81
+*            ___ftunpack size 4,4 offset 94
+             ___ftpack size 3,3 offset 94
+         ___ftadd size 6,6 offset 81
+             ___ftunpack size 4,4 offset 94
+             ___ftpack size 3,3 offset 94
+         ___fttol size 4,6 offset 81
+             ___ftunpack size 4,4 offset 94
+         ___awdiv size 4,5 offset 81
+         i2___wmul size 4,2 offset 81
+
+Estimated maximum call depth: 3
+
+*intlevel1 size 0,0 offset 102
+*    _my_isr_low size 0,21 offset 102
+         i1_VALOR_ADC size 4,8 offset 123
+             i1_Delay_Us size 2,0 offset 135
+         i1___lwdiv size 4,4 offset 123
+         i1___lmul size 8,4 offset 123
+*        i1___aldiv size 8,7 offset 123
+         i1___wmul size 4,2 offset 123
+
+Estimated maximum call depth: 3
+
+
+                Name          Link     Load   Length Selector Space Scale
+C:\Users\ELIELM~1\AppData\Local\Temp\sbic.obj
+                end_init        6C       6C       28       C     0
+                init            28       28       44       C     0
+                reset_vec        0        0        4       0     0
+dist/default/production\Injecao_Elet_firmware.X.production.obj
+                intcodelo       18       18       10       C     0
+                intcode          8        8       10       4     0
+                idata           94       94        5       C     0
+                mediumcon     FD2E     FD2E      2D2    7E97     0
+                config      300000   300000        8  300000     0
+                eeprom_da   F00000   F00000       10  F00000     0
+                text57        78A8     78A8       32      4D     0
+                text58        79A6     79A6        E      4D     0
+                text56        7524     7524       60      4D     0
+                text54        790A     790A       2C      4D     0
+                text55        4CAC     4CAC      1C4      4D     0
+                text59        5344     5344      17E      4D     0
+                text62        713C     713C       A4      4D     0
+                text63        4AE8     4AE8      1C4      4D     0
+                text60        7936     7936       20      4D     0
+                text61          9A       9A      A8E      4D     0
+                text46        7770     7770       4E      4D     0
+                text47        2A80     2A80      3D8      4D     0
+                text45        58C8     58C8      14E      4D     0
+                text43        7722     7722       4E      4D     0
+                text44        2E58     2E58      3D0      4D     0
+                text48        7686     7686       4E      4D     0
+                text52        7098     7098       A4      4D     0
+                text53        798E     798E       18      4D     0
+                text51        7976     7976       18      4D     0
+                text49        20EC     20EC      580      4D     0
+                text50        79B4     79B4        E      4D     0
+                text64        7394     7394       66      4D     0
+                text78        77FE     77FE       3E      4D     0
+                text79        6F4A     6F4A       AA      4D     0
+                text77        4924     4924      1C4      4D     0
+                text75        5B64     5B64      146      4D     0
+                text76        6FF4     6FF4       A4      4D     0
+                text80        5F30     5F30      13E      4D     0
+                text68        1AAA     1AAA      642      4D     0
+                text67        7956     7956       20      4D     0
+                text65        671C     671C       E4      4D     0
+                text66        6DDA     6DDA       B8      4D     0
+                text69        3228     3228      33A      4D     0
+                text73        62D2     62D2      130      4D     0
+                text74        6C54     6C54       C8      4D     0
+                text72        73FA     73FA       66      4D     0
+                text70        4E70     4E70      1B8      4D     0
+                text71        5CAA     5CAA      144      4D     0
+                text42        7638     7638       4E      4D     0
+                text11        3868     3868      2E4      4D     0
+                text12        6402     6402      10E      4D     0
+                text10        5A16     5A16      14E      4D     0
+                text8         6B80     6B80       D4      4D     0
+                text9         5776     5776      152      4D     0
+                text13        54C2     54C2      15C      4D     0
+                text17        51C0     51C0      184      4D     0
+                text18        69C4     69C4       E0      4D     0
+                text16        5028     5028      198      4D     0
+                text14        3DE4     3DE4      28E      4D     0
+                text15        5DEE     5DEE      142      4D     0
+                text0          B28      B28      888      4D     0
+                text1         7278     7278       94      4D     0
+                text2         75E2     75E2       56      4D     0
+                text6         6616     6616      106      4D     0
+                text7         42FE     42FE      23A      4D     0
+                text5         6510     6510      106      4D     0
+                text3         78DA     78DA       30      4D     0
+                text4         71E0     71E0       98      4D     0
+                text19        61A0     61A0      132      4D     0
+                text34        7584     7584       5E      4D     0
+                text35        783C     783C       3A      4D     0
+                text33        77BE     77BE       40      4D     0
+                text31        7876     7876       32      4D     0
+                text32        6E92     6E92       B8      4D     0
+                text36        606E     606E      132      4D     0
+                text40        74C2     74C2       62      4D     0
+                text41        3562     3562      306      4D     0
+                text39        7460     7460       62      4D     0
+                text37        13B0     13B0      6FA      4D     0
+                text38        561E     561E      158      4D     0
+                text23        68E4     68E4       E0      4D     0
+                text24        4072     4072      28C      4D     0
+                text22        730C     730C       88      4D     0
+                text20        3B4C     3B4C      298      4D     0
+                text21        76D4     76D4       4E      4D     0
+                text25        4538     4538      218      4D     0
+                text29        4750     4750      1D4      4D     0
+                text30        6800     6800       E4      4D     0
+                text28        266C     266C      414      4D     0
+                text26        6D1C     6D1C       BE      4D     0
+                text27        6AA4     6AA4       DC      4D     0
+
+COMMON          param4         400      400       8A     400     1
+
+TOTAL           Name          Link     Load   Length  Space
+        CLASS   CODE           
+                end_init        6C       6C       28     0
+                intcodelo       18       18       10     0
+                intcode          8        8       10     0
+                init            28       28       44     0
+                idata           94       94        5     0
+                reset_vec        0        0        4     0
+                text57        78A8     78A8       32     0
+                text58        79A6     79A6        E     0
+                text56        7524     7524       60     0
+                text54        790A     790A       2C     0
+                text55        4CAC     4CAC      1C4     0
+                text59        5344     5344      17E     0
+                text62        713C     713C       A4     0
+                text63        4AE8     4AE8      1C4     0
+                text60        7936     7936       20     0
+                text61          9A       9A      A8E     0
+                text46        7770     7770       4E     0
+                text47        2A80     2A80      3D8     0
+                text45        58C8     58C8      14E     0
+                text43        7722     7722       4E     0
+                text44        2E58     2E58      3D0     0
+                text48        7686     7686       4E     0
+                text52        7098     7098       A4     0
+                text53        798E     798E       18     0
+                text51        7976     7976       18     0
+                text49        20EC     20EC      580     0
+                text50        79B4     79B4        E     0
+                text64        7394     7394       66     0
+                text78        77FE     77FE       3E     0
+                text79        6F4A     6F4A       AA     0
+                text77        4924     4924      1C4     0
+                text75        5B64     5B64      146     0
+                text76        6FF4     6FF4       A4     0
+                text80        5F30     5F30      13E     0
+                text68        1AAA     1AAA      642     0
+                text67        7956     7956       20     0
+                text65        671C     671C       E4     0
+                text66        6DDA     6DDA       B8     0
+                text69        3228     3228      33A     0
+                text73        62D2     62D2      130     0
+                text74        6C54     6C54       C8     0
+                text72        73FA     73FA       66     0
+                text70        4E70     4E70      1B8     0
+                text71        5CAA     5CAA      144     0
+                text42        7638     7638       4E     0
+                text11        3868     3868      2E4     0
+                text12        6402     6402      10E     0
+                text10        5A16     5A16      14E     0
+                text8         6B80     6B80       D4     0
+                text9         5776     5776      152     0
+                text13        54C2     54C2      15C     0
+                text17        51C0     51C0      184     0
+                text18        69C4     69C4       E0     0
+                text16        5028     5028      198     0
+                text14        3DE4     3DE4      28E     0
+                text15        5DEE     5DEE      142     0
+                text0          B28      B28      888     0
+                text1         7278     7278       94     0
+                text2         75E2     75E2       56     0
+                text6         6616     6616      106     0
+                text7         42FE     42FE      23A     0
+                text5         6510     6510      106     0
+                text3         78DA     78DA       30     0
+                text4         71E0     71E0       98     0
+                text19        61A0     61A0      132     0
+                text34        7584     7584       5E     0
+                text35        783C     783C       3A     0
+                text33        77BE     77BE       40     0
+                text31        7876     7876       32     0
+                text32        6E92     6E92       B8     0
+                text36        606E     606E      132     0
+                text40        74C2     74C2       62     0
+                text41        3562     3562      306     0
+                text39        7460     7460       62     0
+                text37        13B0     13B0      6FA     0
+                text38        561E     561E      158     0
+                text23        68E4     68E4       E0     0
+                text24        4072     4072      28C     0
+                text22        730C     730C       88     0
+                text20        3B4C     3B4C      298     0
+                text21        76D4     76D4       4E     0
+                text25        4538     4538      218     0
+                text29        4750     4750      1D4     0
+                text30        6800     6800       E4     0
+                text28        266C     266C      414     0
+                text26        6D1C     6D1C       BE     0
+                text27        6AA4     6AA4       DC     0
+
+        CLASS   CONST          
+
+        CLASS   SMALLCONST     
+
+        CLASS   MEDIUMCONST    
+                mediumcon     FD2E     FD2E      2D2     0
+
+        CLASS   RAM            
+
+        CLASS   BIGRAM         
+
+        CLASS   COMRAM         
+
+        CLASS   ABS1           
+                abs_s1           0        0       E7     1
+                abs_s1         100      100       C8     1
+                abs_s1         200      200       C8     1
+                abs_s1         300      300       64     1
+
+        CLASS   BANK0          
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   BANK4          
+                param4         400      400       8A     1
+
+        CLASS   BANK5          
+
+        CLASS   BANK6          
+
+        CLASS   BANK7          
+
+        CLASS   BANK8          
+
+        CLASS   BANK9          
+
+        CLASS   BANK10         
+
+        CLASS   BANK11         
+
+        CLASS   BANK12         
+
+        CLASS   BANK13         
+
+        CLASS   BANK14         
+
+        CLASS   BANK15         
+
+        CLASS   NVRAM          
+
+        CLASS   FARRAM         
+
+        CLASS   CONFIG         
+                config      300000   300000        8     0
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+                eeprom_da   F00000   F00000       10     0
+
+
+
+SEGMENTS        Name           Load    Length   Top     Selector    Space Class
+
+                reset_vec       000000  000004  000004         0       0  CODE    
+                intcode         000008  000010  000018         4       0  CODE    
+                intcodelo       000018  000081  000099         C       0  CODE    
+                irdata          00009A  007928  0079C2        4D       0  CODE    
+                param4          000400  00008A  00048A       400       1  BANK4   
+                mediumconst     00FD2E  0002D2  010000      7E97       0  MEDIUMCO
+                config          300000  000008  300008    300000       0  CONFIG  
+                eeprom_data     F00000  000010  F00010    F00000       0  EEDATA  
+
+
+UNUSED ADDRESS RANGES
+
+        BANK0            0000E7-0000FF
+        BANK1            0001C8-0001FF
+        BANK10           000A00-000AFF
+        BANK11           000B00-000BFF
+        BANK12           000C00-000CFF
+        BANK13           000D00-000DFF
+        BANK14           000E00-000EFF
+        BANK15           000F00-000F7F
+        BANK2            0002C8-0002FF
+        BANK3            000364-0003FF
+        BANK4            00048A-0004FF
+        BANK5            000500-0005FF
+        BANK6            000600-0006FF
+        BANK7            000700-0007FF
+        BANK8            000800-0008FF
+        BANK9            000900-0009FF
+        BIGRAM           0000E7-0000FF
+                         0001C8-0001FF
+                         0002C8-0002FF
+                         000364-0003FF
+                         00048A-000F7F
+        CODE             000004-000007
+                         000099-000099
+                         0079C2-00FD2D
+        CONFIG           300008-30000D
+        CONST            000004-000007
+                         000099-000099
+                         0079C2-00FD2D
+        EEDATA           F00010-F003FF
+        IDLOC            200000-200007
+        MEDIUMCONST      0079C2-00FD2D
+        NVRAM            000F00-000F7F
+        RAM              0000E7-0000FF
+                         0001C8-0001FF
+                         0002C8-0002FF
+                         000364-0003FF
+                         00048A-000F7F
+        SMALLCONST       0079C2-00FD2D
+
+                                  Symbol Table
+
+??_ALERTA_MENU              param4       000401
+??_Beep_Alerta              param4       000402
+??_Beep_Simples             param4       000404
+??_Botao_CNL                param4       000403
+??_Botao_DEC                param4       000403
+??_Botao_DEC_Auto           param4       000403
+??_Botao_ENT                param4       000403
+??_Botao_INC                param4       000403
+??_Botao_INC_Auto           param4       000403
+??_Delay_Ms                 param4       000409
+??_Delay_Us                 param4       000415
+??_Grafico                  param4       000409
+??_Grava_CGRAM              param4       000401
+??_MENU_01                  param4       000401
+??_MENU_02                  param4       000401
+??_MENU_03                  param4       000401
+??_MENU_04                  param4       000401
+??_MENU_05                  param4       000401
+??_MENU_06                  param4       000401
+??_MENU_07                  param4       000401
+??_MENU_08                  param4       000401
+??_MENU_09                  param4       000401
+??_MENU_21                  param4       000401
+??_MENU_22                  param4       000401
+??_MENU_23                  param4       000401
+??_MENU_24                  param4       000401
+??_MENU_25                  param4       000401
+??_MENU_26                  param4       000401
+??_MENU_27                  param4       000401
+??_MENU_28                  param4       000401
+??_MENU_29                  param4       000401
+??_MENU_41                  param4       000401
+??_MENU_42                  param4       000401
+??_MENU_43                  param4       000401
+??_MENU_44                  param4       000401
+??_MENU_45                  param4       000401
+??_MENU_46                  param4       000401
+??_MENU_47                  param4       000401
+??_MENU_48                  param4       000401
+??_MENU_49                  param4       000401
+??_SETUP                    param4       000405
+??_Simbolos_lcd             param4       000405
+??_VALOR_ADC                param4       000409
+??___aldiv                  param4       000414
+??___altoft                 param4       000455
+??___awdiv                  param4       000455
+??___awtoft                 param4       000454
+??___ftadd                  param4       000457
+??___ftmul                  param4       000457
+??___ftneg                  param4       000461
+??___ftpack                 param4       000461
+??___fttol                  param4       000455
+??___ftunpack               param4       000462
+??___lmul                   param4       000414
+??___lwdiv                  param4       000409
+??_caracter_lcd             param4       00040D
+??_comando_lcd              param4       00040E
+??_envia_dados_lcd          param4       00040F
+??_escrever_eeprom          param4       000406
+??_inicializa_lcd           param4       000405
+??_inicializa_sistema       param4       000401
+??_ler_eeprom               param4       000407
+??_limpa_lcd                param4       000406
+??_linha1_lcd               param4       000406
+??_linha2_lcd               param4       00040C
+??_main                     param4       000400
+??_my_isr                   param4       00041B
+??_my_isr_low               param4       000466
+??_separa_unidades          param4       000407
+??_separa_unidades_SZ       param4       000407
+??_texto_lcd                param4       000405
+??_xy_lcd                   param4       000405
+??i1_Delay_Us               param4       000489
+??i1_VALOR_ADC              param4       00047F
+??i1___aldiv                param4       000483
+??i1___lmul                 param4       000483
+??i1___lwdiv                param4       00047F
+??i1___wmul                 param4       00047F
+??i2___aldiv                param4       000459
+??i2___lmul                 param4       000459
+??i2___wmul                 param4       000455
+?_ALERTA_MENU               param4       000401
+?_Beep_Alerta               param4       000402
+?_Beep_Simples              param4       000404
+?_Botao_CNL                 param4       000403
+?_Botao_DEC                 param4       000403
+?_Botao_DEC_Auto            param4       000403
+?_Botao_ENT                 param4       000403
+?_Botao_INC                 param4       000403
+?_Botao_INC_Auto            param4       000403
+?_Delay_Ms                  param4       000407
+?_Delay_Us                  param4       000413
+?_Grafico                   param4       000401
+?_Grava_CGRAM               param4       000401
+?_MENU_01                   param4       000401
+?_MENU_02                   param4       000401
+?_MENU_03                   param4       000401
+?_MENU_04                   param4       000401
+?_MENU_05                   param4       000401
+?_MENU_06                   param4       000401
+?_MENU_07                   param4       000401
+?_MENU_08                   param4       000401
+?_MENU_09                   param4       000401
+?_MENU_21                   param4       000401
+?_MENU_22                   param4       000401
+?_MENU_23                   param4       000401
+?_MENU_24                   param4       000401
+?_MENU_25                   param4       000401
+?_MENU_26                   param4       000401
+?_MENU_27                   param4       000401
+?_MENU_28                   param4       000401
+?_MENU_29                   param4       000401
+?_MENU_41                   param4       000401
+?_MENU_42                   param4       000401
+?_MENU_43                   param4       000401
+?_MENU_44                   param4       000401
+?_MENU_45                   param4       000401
+?_MENU_46                   param4       000401
+?_MENU_47                   param4       000401
+?_MENU_48                   param4       000401
+?_MENU_49                   param4       000401
+?_SETUP                     param4       000405
+?_Simbolos_lcd              param4       000403
+?_VALOR_ADC                 param4       000405
+?___aldiv                   param4       00040C
+?___altoft                  param4       000451
+?___awdiv                   param4       000451
+?___awtoft                  param4       000451
+?___ftadd                   param4       000451
+?___ftmul                   param4       000451
+?___ftneg                   param4       00045E
+?___ftpack                  param4       00045E
+?___fttol                   param4       000451
+?___ftunpack                param4       00045E
+?___lmul                    param4       00040C
+?___lwdiv                   param4       000405
+?_caracter_lcd              param4       00040C
+?_comando_lcd               param4       00040D
+?_envia_dados_lcd           param4       00040E
+?_escrever_eeprom           param4       000403
+?_inicializa_lcd            param4       000405
+?_inicializa_sistema        param4       000401
+?_ler_eeprom                param4       000405
+?_limpa_lcd                 param4       000406
+?_linha1_lcd                param4       000406
+?_linha2_lcd                param4       00040C
+?_main                      param4       000400
+?_my_isr                    param4       00041B
+?_my_isr_low                param4       000466
+?_separa_unidades           param4       000403
+?_separa_unidades_SZ        param4       000403
+?_texto_lcd                 param4       000403
+?_xy_lcd                    param4       000403
+?i1_Delay_Us                param4       000487
+?i1_VALOR_ADC               param4       00047B
+?i1___aldiv                 param4       00047B
+?i1___lmul                  param4       00047B
+?i1___lwdiv                 param4       00047B
+?i1___wmul                  param4       00047B
+?i2___aldiv                 param4       000451
+?i2___lmul                  param4       000451
+?i2___wmul                  param4       000451
+Beep_Alerta@c               param4       000402
+Beep_Simples@c              param4       000404
+Delay_Ms@Ms                 param4       000407
+Delay_Us@Us                 param4       000413
+Grafico@Max                 param4       000405
+Grafico@Valor               param4       000401
+Grafico@caracter            param4       00040A
+Grafico@coluna              param4       000409
+Simbolos_lcd@letra          param4       000403
+VALOR_ADC@ADC               param4       000409
+VALOR_ADC@CH                param4       000405
+_ADCON0                     (abs)        000FC2
+_ADCON1                     (abs)        000FC1
+_ADCON2                     (abs)        000FC0
+_ADIE                       (abs)        007CEE
+_ADIF                       (abs)        007CF6
+_ADRESH                     (abs)        000FC4
+_ADRESL                     (abs)        000FC3
+_ALERTA                     (abs)        000000
+_ALERTA_MENU                text27       006AA4
+_BATERIA                    (abs)        00003C
+_Beep_Alerta                text45       0058C8
+_Beep_Simples               text56       007524
+_Botao_CNL                  text43       007722
+_Botao_DEC                  text42       007638
+_Botao_DEC_Auto             text40       0074C2
+_Botao_ENT                  text48       007686
+_Botao_INC                  text46       007770
+_Botao_INC_Auto             text39       007460
+_CFGS                       (abs)        007D36
+_CIL_MCUB                   (abs)        000035
+_CMCON                      (abs)        000FB4
+_CONT_B_ELET_COMB           (abs)        000037
+_CONT_TIMER1                (abs)        000005
+_CUT_OFF                    (abs)        000001
+_DEADTIME                   (abs)        000002
+_Delay_Ms                   text57       0078A8
+_Delay_Us                   text60       007936
+_EEADR                      (abs)        000FA9
+_EEADRH                     (abs)        000FAA
+_EECON2                     (abs)        000FA7
+_EEDATA                     (abs)        000FA8
+_EEPGD                      (abs)        007D37
+_EQUACAO_A                  (abs)        0000B6
+_EXCESSO_TEMP               (abs)        00003E
+_FLAG_EXCESSO               (abs)        000006
+_FREE                       (abs)        007D34
+_GIE                        (abs)        007F97
+_GODONE                     (abs)        007E11
+_Grafico                    text41       003562
+_Grava_CGRAM                text47       002A80
+_INDICE_MM                  (abs)        000009
+_INJETOR_ABERTURA           (abs)        000044
+_INJETOR_ABERTURA_MAX       (abs)        000046
+_INJETOR_MS                 (abs)        000040
+_INJETOR_MS_MAX             (abs)        000042
+_INT0IE                     (abs)        007F94
+_INT0IF                     (abs)        007F91
+_INT1IE                     (abs)        007F83
+_INT1IF                     (abs)        007F80
+_INT1IP                     (abs)        007F86
+_INT2IE                     (abs)        007F84
+_INT2IF                     (abs)        007F81
+_INT2IP                     (abs)        007F87
+_INTCON                     (abs)        000FF2
+_INTEDG0                    (abs)        007F8E
+_INTEDG1                    (abs)        007F8D
+_INTEDG2                    (abs)        007F8C
+_IPEN                       (abs)        007E87
+_LAMBDA                     (abs)        0000BA
+_LAMBDA_ANTERIOR            (abs)        0000D4
+_LAMBDA_DERIVADA            (abs)        0000D6
+_LAMBDA_ERRO                (abs)        0000D0
+_LAMBDA_ERRO_MAX            (abs)        0000E2
+_LAMBDA_INTEGRAL            (abs)        0000D2
+_LAMBDA_INTEG_ERRO          (abs)        0000AF
+_LAMBDA_INTEG_SIG           (abs)        000001
+_LAMBDA_PROPORCAO           (abs)        0000D8
+_LAMBDA_SET_POINT           (abs)        0000E4
+_LATA                       (abs)        000F89
+_LATB                       (abs)        000F8A
+_LATC                       (abs)        000F8B
+_LATD                       (abs)        000F8C
+_LATE                       (abs)        000F8D
+_MAP                        (abs)        0000DE
+_MAP_ANTERIOR               (abs)        0000E0
+_MAP_DERIVADA               (abs)        0000DA
+_MAP_MIN                    (abs)        0000DC
+_MEDIA_BATERIA              (abs)        0000CE
+_MEDIA_LAMBDA               (abs)        0000C0
+_MEDIA_MAP                  (abs)        0000C2
+_MEDIA_TEMP_AR              (abs)        0000BC
+_MEDIA_TEMP_MOTOR           (abs)        0000BE
+_MEDIA_TPS                  (abs)        0000C4
+_MENU                       (abs)        0000E6
+_MENU_01                    text29       004750
+_MENU_02                    text10       005A16
+_MENU_03                    text9        005776
+_MENU_04                    text8        006B80
+_MENU_05                    text13       0054C2
+_MENU_06                    text12       006402
+_MENU_07                    text11       003868
+_MENU_08                    text7        0042FE
+_MENU_09                    text3        0078DA
+_MENU_21                    text2        0075E2
+_MENU_22                    text1        007278
+_MENU_23                    text6        006616
+_MENU_24                    text5        006510
+_MENU_25                    text4        0071E0
+_MENU_26                    text23       0068E4
+_MENU_27                    text22       00730C
+_MENU_28                    text21       0076D4
+_MENU_29                    text26       006D1C
+_MENU_41                    text25       004538
+_MENU_42                    text24       004072
+_MENU_43                    text20       003B4C
+_MENU_44                    text16       005028
+_MENU_45                    text15       005DEE
+_MENU_46                    text14       003DE4
+_MENU_47                    text19       0061A0
+_MENU_48                    text18       0069C4
+_MENU_49                    text17       0051C0
+_MM_BATERIA                 (abs)        000164
+_MM_LAMBDA                  (abs)        000200
+_MM_MAP                     (abs)        00004B
+_MM_TEMP_AR                 (abs)        000100
+_MM_TEMP_MOTOR              (abs)        000264
+_MM_TPS                     (abs)        000300
+_M_AR                       (abs)        0000B3
+_M_COMB                     (abs)        000048
+_N_CILINDRO                 (abs)        00000A
+_PEIE                       (abs)        007F96
+_PORTA                      (abs)        000F80
+_PORTB                      (abs)        000F81
+_PORTC                      (abs)        000F82
+_PORTD                      (abs)        000F83
+_PORTE                      (abs)        000F84
+_PR2                        (abs)        000FCB
+_PSA                        (abs)        007EAB
+_RB4                        (abs)        007C0C
+_RB5                        (abs)        007C0D
+_RB6                        (abs)        007C0E
+_RB7                        (abs)        007C0F
+_RBIP                       (abs)        007F88
+_RBPU                       (abs)        007F8F
+_RC0                        (abs)        007C10
+_RC1                        (abs)        007C11
+_RC2                        (abs)        007C12
+_RD                         (abs)        007D30
+_RD0                        (abs)        007C18
+_RD1                        (abs)        007C19
+_RD2                        (abs)        007C1A
+_RD3                        (abs)        007C1B
+_RD4                        (abs)        007C1C
+_RD5                        (abs)        007C1D
+_RD7                        (abs)        007C1F
+_RO_AR                      (abs)        000039
+_RPM                        (abs)        0000CA
+_RPM_MAX                    (abs)        0000CC
+_RS                         (abs)        000002
+_SETUP                      text36       00606E
+_Simbolos_lcd               text37       0013B0
+_T                          (abs)        0000C6
+_T08BIT                     (abs)        007EAE
+_T0CON                      (abs)        000FD5
+_T0CS                       (abs)        007EAD
+_T0PS0                      (abs)        007EA8
+_T0PS1                      (abs)        007EA9
+_T0PS2                      (abs)        007EAA
+_T0SE                       (abs)        007EAC
+_T1C                        (abs)        000007
+_T1CKPS0                    (abs)        007E6C
+_T1CKPS1                    (abs)        007E6D
+_T1OSCEN                    (abs)        007E6B
+_T1RD16                     (abs)        007E6F
+_T2CKPS0                    (abs)        007E50
+_T2CKPS1                    (abs)        007E51
+_T2OUTPS0                   (abs)        007E53
+_T2OUTPS1                   (abs)        007E54
+_T2OUTPS2                   (abs)        007E55
+_T2OUTPS3                   (abs)        007E56
+_T3CCP1                     (abs)        007D8B
+_T3CCP2                     (abs)        007D8E
+_T3CKPS0                    (abs)        007D8C
+_T3CKPS1                    (abs)        007D8D
+_T3RD16                     (abs)        007D8F
+_TEMP_AR                    (abs)        0000C8
+_TEMP_AR_MAX                (abs)        000033
+_TEMP_MOTOR                 (abs)        000011
+_TEMP_MOTOR_MAX             (abs)        000013
+_TEMP_VENTILADOR            (abs)        000008
+_TIMER1                     (abs)        00000D
+_TIMER_BOTAO_ACIONA1        (abs)        00001F
+_TIMER_BOTAO_ACIONA2        (abs)        00002C
+_TIMER_BOTAO_ACIONA3        (abs)        00002D
+_TIMER_BOTAO_ACIONA4        (abs)        00002A
+_TIMER_BOTAO_AGUARDA1       (abs)        00002B
+_TIMER_BOTAO_AGUARDA2       (abs)        00002E
+_TIMER_BOTAO_AGUARDA3       (abs)        000031
+_TIMER_BOTAO_AGUARDA4       (abs)        000032
+_TIPO_COMB                  (abs)        00002F
+_TIPO_REFRIG                (abs)        000030
+_TMR0H                      (abs)        000FD7
+_TMR0IE                     (abs)        007F95
+_TMR0IF                     (abs)        007F92
+_TMR0IP                     (abs)        007F8A
+_TMR0L                      (abs)        000FD6
+_TMR0ON                     (abs)        007EAF
+_TMR1                       (abs)        000FCE
+_TMR1CS                     (abs)        007E69
+_TMR1H                      (abs)        000FCF
+_TMR1IE                     (abs)        007CE8
+_TMR1IF                     (abs)        007CF0
+_TMR1IP                     (abs)        007CF8
+_TMR1L                      (abs)        000FCE
+_TMR1ON                     (abs)        007E68
+_TMR2                       (abs)        000FCC
+_TMR2IE                     (abs)        007CE9
+_TMR2IF                     (abs)        007CF1
+_TMR2IP                     (abs)        007CF9
+_TMR2ON                     (abs)        007E52
+_TMR3                       (abs)        000FB2
+_TMR3CS                     (abs)        007D89
+_TMR3H                      (abs)        000FB3
+_TMR3IE                     (abs)        007D01
+_TMR3IF                     (abs)        007D09
+_TMR3IP                     (abs)        007D11
+_TMR3L                      (abs)        000FB2
+_TMR3ON                     (abs)        007D88
+_TPS                        (abs)        00000F
+_TPS_ANTERIOR               (abs)        000015
+_TPS_DERIVADA               (abs)        00001B
+_TRISA                      (abs)        000F92
+_TRISB                      (abs)        000F93
+_TRISC                      (abs)        000F94
+_TRISD                      (abs)        000F95
+_TRISE                      (abs)        000F96
+_T_INJ                      (abs)        00001D
+_VALOR_ADC                  text30       006800
+_VAZAO_INJETOR              (abs)        000029
+_VCFG0                      (abs)        007E0C
+_VCFG1                      (abs)        007E0D
+_VOLUME_MOTOR               (abs)        000017
+_V_INJ                      (abs)        000019
+_WR                         (abs)        007D31
+_WREN                       (abs)        007D32
+_ZERO_MAP                   (abs)        00000B
+__Bnvbit                    nvbit        000046
+__Brbit                     rbit         000046
+__HRAM                      (abs)        000000
+__Habsbss0                  (abs)        0000E2
+__Habsbss1                  (abs)        0001C8
+__Habsbss2                  (abs)        0002C8
+__Habsbss3                  (abs)        000364
+__Hbigbss                   bigbss       00048A
+__Hbigdata                  bigdata      00048A
+__Hbss                      bss          0000E7
+__Hclrtext                  clrtext      00009A
+__Hconfig                   config       300008
+__Hconst                    const        000094
+__Hdata                     data         00009A
+__Hdata0                    (abs)        0000E7
+__Heeprom_data              eeprom_data  F00010
+__Hend_init                 end_init     000094
+__Hfarbss                   farbss       000000
+__Hfardata                  fardata      000000
+__Hibigdata                 ibigdata     00009A
+__Hidata                    idata        000099
+__Hidloc                    idloc        200000
+__Hifardata                 ifardata     00009A
+__Hinit                     init         00006C
+__Hintcode                  intcode      000018
+__Hintcodelo                intcodelo    000028
+__Hintentry                 intentry     00009A
+__Hintret                   intret       00009A
+__Hintsave_regs             intsave_regs 00048A
+__Hirdata                   irdata       00009A
+__Hmediumconst              mediumconst  010000
+__Hnvbit                    nvbit        000230
+__Hnvram                    nvram        00009A
+__Hnvrram                   nvrram       000046
+__Hparam                    param4       00048A
+__Hparam0                   param0       00009A
+__Hparam1                   param1       00009A
+__Hparam10                  param10      00009A
+__Hparam11                  param11      00009A
+__Hparam12                  param12      00009A
+__Hparam13                  param13      00009A
+__Hparam14                  param14      00009A
+__Hparam15                  param15      00009A
+__Hparam2                   param2       00009A
+__Hparam3                   param3       00009A
+__Hparam4                   param4       00048A
+__Hparam5                   param5       00009A
+__Hparam6                   param6       00009A
+__Hparam7                   param7       00009A
+__Hparam8                   param8       00009A
+__Hparam9                   param9       00009A
+__Hpowerup                  powerup      000028
+__Hramtop                   ramtop       001000
+__Hrbit                     rbit         000230
+__Hrbss                     rbss         000046
+__Hrdata                    rdata        000046
+__Hreset_vec                reset_vec    000004
+__Hrparam                   rparam       00009A
+__Hsmallconst               smallconst   001000
+__Hstruct                   struct       000046
+__Htemp                     temp         000046
+__Htext                     text         00009A
+__Htext0                    text0        00009A
+__Htext1                    text1        00009A
+__Htext10                   text10       00009A
+__Htext11                   text11       00009A
+__Htext12                   text12       00009A
+__Htext13                   text13       00009A
+__Htext14                   text14       00009A
+__Htext15                   text15       00009A
+__Htext16                   text16       00009A
+__Htext17                   text17       00009A
+__Htext18                   text18       00009A
+__Htext19                   text19       00009A
+__Htext2                    text2        00009A
+__Htext20                   text20       00009A
+__Htext21                   text21       00009A
+__Htext22                   text22       00009A
+__Htext23                   text23       00009A
+__Htext24                   text24       00009A
+__Htext25                   text25       00009A
+__Htext26                   text26       00009A
+__Htext27                   text27       00009A
+__Htext28                   text28       00009A
+__Htext29                   text29       00009A
+__Htext3                    text3        00009A
+__Htext30                   text30       00009A
+__Htext31                   text31       00009A
+__Htext32                   text32       00009A
+__Htext33                   text33       00009A
+__Htext34                   text34       00009A
+__Htext35                   text35       00009A
+__Htext36                   text36       00009A
+__Htext37                   text37       00009A
+__Htext38                   text38       00009A
+__Htext39                   text39       00009A
+__Htext4                    text4        00009A
+__Htext40                   text40       00009A
+__Htext41                   text41       00009A
+__Htext42                   text42       00009A
+__Htext43                   text43       00009A
+__Htext44                   text44       00009A
+__Htext45                   text45       00009A
+__Htext46                   text46       00009A
+__Htext47                   text47       00009A
+__Htext48                   text48       00009A
+__Htext49                   text49       00009A
+__Htext5                    text5        00009A
+__Htext50                   text50       00009A
+__Htext51                   text51       00009A
+__Htext52                   text52       00009A
+__Htext53                   text53       00009A
+__Htext54                   text54       00009A
+__Htext55                   text55       00009A
+__Htext56                   text56       00009A
+__Htext57                   text57       00009A
+__Htext58                   text58       00009A
+__Htext59                   text59       00009A
+__Htext6                    text6        00009A
+__Htext60                   text60       00009A
+__Htext61                   text61       00009A
+__Htext62                   text62       00009A
+__Htext63                   text63       00009A
+__Htext64                   text64       00009A
+__Htext65                   text65       00009A
+__Htext66                   text66       00009A
+__Htext67                   text67       00009A
+__Htext68                   text68       00009A
+__Htext69                   text69       00009A
+__Htext7                    text7        00009A
+__Htext70                   text70       00009A
+__Htext71                   text71       00009A
+__Htext72                   text72       00009A
+__Htext73                   text73       00009A
+__Htext74                   text74       00009A
+__Htext75                   text75       00009A
+__Htext76                   text76       00009A
+__Htext77                   text77       00009A
+__Htext78                   text78       00009A
+__Htext79                   text79       00009A
+__Htext8                    text8        00009A
+__Htext80                   text80       00009A
+__Htext81                   text81       00009A
+__Htext9                    text9        00009A
+__LRAM                      (abs)        000001
+__Labsbss0                  (abs)        000000
+__Labsbss1                  (abs)        000100
+__Labsbss2                  (abs)        000200
+__Labsbss3                  (abs)        000300
+__Lbigbss                   bigbss       00048A
+__Lbigdata                  bigdata      00048A
+__Lbss                      bss          0000E7
+__Lclrtext                  clrtext      00009A
+__Lconfig                   config       300000
+__Lconst                    const        000094
+__Ldata                     (abs)        0000E2
+__Ldata0                    (abs)        0000E2
+__Leeprom_data              eeprom_data  F00000
+__Lend_init                 end_init     00006C
+__Lfarbss                   farbss       000000
+__Lfardata                  fardata      000000
+__Libigdata                 ibigdata     00009A
+__Lidata                    idata        000094
+__Lidloc                    idloc        200000
+__Lifardata                 ifardata     00009A
+__Linit                     init         000028
+__Lintcode                  intcode      000008
+__Lintcodelo                intcodelo    000018
+__Lintentry                 intentry     00009A
+__Lintret                   intret       00009A
+__Lintsave_regs             intsave_regs 00048A
+__Lirdata                   irdata       00009A
+__Lmediumconst              mediumconst  00FD2E
+__Lnvbit                    nvbit        000230
+__Lnvram                    nvram        00009A
+__Lnvrram                   nvrram       000046
+__Lparam                    param4       000400
+__Lparam0                   param0       00009A
+__Lparam1                   param1       00009A
+__Lparam10                  param10      00009A
+__Lparam11                  param11      00009A
+__Lparam12                  param12      00009A
+__Lparam13                  param13      00009A
+__Lparam14                  param14      00009A
+__Lparam15                  param15      00009A
+__Lparam2                   param2       00009A
+__Lparam3                   param3       00009A
+__Lparam4                   param4       000400
+__Lparam5                   param5       00009A
+__Lparam6                   param6       00009A
+__Lparam7                   param7       00009A
+__Lparam8                   param8       00009A
+__Lparam9                   param9       00009A
+__Lpowerup                  powerup      000028
+__Lramtop                   ramtop       001000
+__Lrbit                     rbit         000230
+__Lrbss                     rbss         000046
+__Lrdata                    rdata        000046
+__Lreset_vec                reset_vec    000000
+__Lrparam                   rparam       00009A
+__Lsmallconst               smallconst   001000
+__Lstruct                   struct       000046
+__Ltemp                     temp         000046
+__Ltext                     text         00009A
+__Ltext0                    text0        00009A
+__Ltext1                    text1        00009A
+__Ltext10                   text10       00009A
+__Ltext11                   text11       00009A
+__Ltext12                   text12       00009A
+__Ltext13                   text13       00009A
+__Ltext14                   text14       00009A
+__Ltext15                   text15       00009A
+__Ltext16                   text16       00009A
+__Ltext17                   text17       00009A
+__Ltext18                   text18       00009A
+__Ltext19                   text19       00009A
+__Ltext2                    text2        00009A
+__Ltext20                   text20       00009A
+__Ltext21                   text21       00009A
+__Ltext22                   text22       00009A
+__Ltext23                   text23       00009A
+__Ltext24                   text24       00009A
+__Ltext25                   text25       00009A
+__Ltext26                   text26       00009A
+__Ltext27                   text27       00009A
+__Ltext28                   text28       00009A
+__Ltext29                   text29       00009A
+__Ltext3                    text3        00009A
+__Ltext30                   text30       00009A
+__Ltext31                   text31       00009A
+__Ltext32                   text32       00009A
+__Ltext33                   text33       00009A
+__Ltext34                   text34       00009A
+__Ltext35                   text35       00009A
+__Ltext36                   text36       00009A
+__Ltext37                   text37       00009A
+__Ltext38                   text38       00009A
+__Ltext39                   text39       00009A
+__Ltext4                    text4        00009A
+__Ltext40                   text40       00009A
+__Ltext41                   text41       00009A
+__Ltext42                   text42       00009A
+__Ltext43                   text43       00009A
+__Ltext44                   text44       00009A
+__Ltext45                   text45       00009A
+__Ltext46                   text46       00009A
+__Ltext47                   text47       00009A
+__Ltext48                   text48       00009A
+__Ltext49                   text49       00009A
+__Ltext5                    text5        00009A
+__Ltext50                   text50       00009A
+__Ltext51                   text51       00009A
+__Ltext52                   text52       00009A
+__Ltext53                   text53       00009A
+__Ltext54                   text54       00009A
+__Ltext55                   text55       00009A
+__Ltext56                   text56       00009A
+__Ltext57                   text57       00009A
+__Ltext58                   text58       00009A
+__Ltext59                   text59       00009A
+__Ltext6                    text6        00009A
+__Ltext60                   text60       00009A
+__Ltext61                   text61       00009A
+__Ltext62                   text62       00009A
+__Ltext63                   text63       00009A
+__Ltext64                   text64       00009A
+__Ltext65                   text65       00009A
+__Ltext66                   text66       00009A
+__Ltext67                   text67       00009A
+__Ltext68                   text68       00009A
+__Ltext69                   text69       00009A
+__Ltext7                    text7        00009A
+__Ltext70                   text70       00009A
+__Ltext71                   text71       00009A
+__Ltext72                   text72       00009A
+__Ltext73                   text73       00009A
+__Ltext74                   text74       00009A
+__Ltext75                   text75       00009A
+__Ltext76                   text76       00009A
+__Ltext77                   text77       00009A
+__Ltext78                   text78       00009A
+__Ltext79                   text79       00009A
+__Ltext8                    text8        00009A
+__Ltext80                   text80       00009A
+__Ltext81                   text81       00009A
+__Ltext9                    text9        00009A
+__S0                        (abs)        F00010
+__S1                        (abs)        000F00
+___aldiv                    text55       004CAC
+___aldiv@counter            param4       000414
+___aldiv@dividend           param4       00040C
+___aldiv@divisor            param4       000410
+___aldiv@quotient           param4       000416
+___aldiv@sign               param4       000415
+___altoft                   text75       005B64
+___altoft@c                 param4       000451
+___altoft@exp               param4       000456
+___altoft@f1                param4       000457
+___altoft@sign              param4       000455
+___awdiv                    text73       0062D2
+___awdiv@counter            param4       000455
+___awdiv@dividend           param4       000451
+___awdiv@divisor            param4       000453
+___awdiv@quotient           param4       000457
+___awdiv@sign               param4       000456
+___awtoft                   text74       006C54
+___awtoft@c                 param4       000451
+___awtoft@f1                param4       000454
+___ftadd                    text69       003228
+___ftadd@cntr               param4       000458
+___ftadd@exp1               param4       00045B
+___ftadd@exp2               param4       00045A
+___ftadd@f1                 param4       000451
+___ftadd@f2                 param4       000454
+___ftadd@sign1              param4       000459
+___ftadd@sign2              param4       000457
+___ftmul                    text70       004E70
+___ftmul@cntr               param4       000459
+___ftmul@exp1               param4       000458
+___ftmul@f1                 param4       000451
+___ftmul@f2                 param4       000454
+___ftmul@f3                 param4       00045A
+___ftmul@sign1              param4       000457
+___ftneg                    text78       0077FE
+___ftneg@f1                 param4       00045E
+___ftpack                   text80       005F30
+___ftpack@arg               param4       00045E
+___ftpack@exp               param4       000460
+___fttol                    text71       005CAA
+___fttol@exp1               param4       000456
+___fttol@f1                 param4       000451
+___fttol@lval               param4       000457
+___fttol@sign1              param4       000455
+___ftunpack                 text79       006F4A
+___ftunpack@arg             param4       00045E
+___ftunpack@exp             param4       000460
+___ftunpack@sign            param4       000462
+___lmul                     text52       007098
+___lmul@multiplicand        param4       000410
+___lmul@multiplier          param4       00040C
+___lmul@product             param4       000414
+___lwdiv                    text32       006E92
+___lwdiv@counter            param4       000409
+___lwdiv@dividend           param4       000405
+___lwdiv@divisor            param4       000407
+___lwdiv@quotient           param4       00040A
+__accesstop                 (abs)        000080
+__activetblptr              (abs)        000002
+__end_of_ALERTA_MENU        text27       006B80
+__end_of_Beep_Alerta        text45       005A16
+__end_of_Beep_Simples       text56       007584
+__end_of_Botao_CNL          text43       007770
+__end_of_Botao_DEC          text42       007686
+__end_of_Botao_DEC_Auto     text40       007524
+__end_of_Botao_ENT          text48       0076D4
+__end_of_Botao_INC          text46       0077BE
+__end_of_Botao_INC_Auto     text39       0074C2
+__end_of_Delay_Ms           text57       0078DA
+__end_of_Delay_Us           text60       007956
+__end_of_Grafico            text41       003868
+__end_of_Grava_CGRAM        text47       002E58
+__end_of_MENU_01            text29       004924
+__end_of_MENU_02            text10       005B64
+__end_of_MENU_03            text9        0058C8
+__end_of_MENU_04            text8        006C54
+__end_of_MENU_05            text13       00561E
+__end_of_MENU_06            text12       006510
+__end_of_MENU_07            text11       003B4C
+__end_of_MENU_08            text7        004538
+__end_of_MENU_09            text3        00790A
+__end_of_MENU_21            text2        007638
+__end_of_MENU_22            text1        00730C
+__end_of_MENU_23            text6        00671C
+__end_of_MENU_24            text5        006616
+__end_of_MENU_25            text4        007278
+__end_of_MENU_26            text23       0069C4
+__end_of_MENU_27            text22       007394
+__end_of_MENU_28            text21       007722
+__end_of_MENU_29            text26       006DDA
+__end_of_MENU_41            text25       004750
+__end_of_MENU_42            text24       0042FE
+__end_of_MENU_43            text20       003DE4
+__end_of_MENU_44            text16       0051C0
+__end_of_MENU_45            text15       005F30
+__end_of_MENU_46            text14       004072
+__end_of_MENU_47            text19       0062D2
+__end_of_MENU_48            text18       006AA4
+__end_of_MENU_49            text17       005344
+__end_of_SETUP              text36       0061A0
+__end_of_Simbolos_lcd       text37       001AAA
+__end_of_VALOR_ADC          text30       0068E4
+__end_of___aldiv            text55       004E70
+__end_of___altoft           text75       005CAA
+__end_of___awdiv            text73       006402
+__end_of___awtoft           text74       006D1C
+__end_of___ftadd            text69       003562
+__end_of___ftmul            text70       005028
+__end_of___ftneg            text78       00783C
+__end_of___ftpack           text80       00606E
+__end_of___fttol            text71       005DEE
+__end_of___ftunpack         text79       006FF4
+__end_of___lmul             text52       00713C
+__end_of___lwdiv            text32       006F4A
+__end_of_caracter_lcd       text50       0079C2
+__end_of_comando_lcd        text58       0079B4
+__end_of_envia_dados_lcd    text59       0054C2
+__end_of_escrever_eeprom    text35       007876
+__end_of_inicializa_lcd     text38       005776
+__end_of_inicializa_sistema text28       002A80
+__end_of_ler_eeprom         text31       0078A8
+__end_of_limpa_lcd          text54       007936
+__end_of_linha1_lcd         text53       0079A6
+__end_of_linha2_lcd         text51       00798E
+__end_of_main               text0        0013B0
+__end_of_my_isr             text68       0020EC
+__end_of_my_isr_low         text61       000B28
+__end_of_separa_unidades    text44       003228
+__end_of_separa_unidades_SZ text49       00266C
+__end_of_texto_lcd          text33       0077FE
+__end_of_xy_lcd             text34       0075E2
+__end_ofi1_Delay_Us         text67       007976
+__end_ofi1_VALOR_ADC        text65       006800
+__end_ofi1___aldiv          text63       004CAC
+__end_ofi1___lmul           text62       0071E0
+__end_ofi1___lwdiv          text66       006E92
+__end_ofi1___wmul           text64       0073FA
+__end_ofi2___aldiv          text77       004AE8
+__end_ofi2___lmul           text76       007098
+__end_ofi2___wmul           text72       007460
+__mediumconst               mediumconst  00FD2E
+__ramtop                    ramtop       001000
+__smallconst                smallconst   001000
+_c_bilhar                   (abs)        000022
+_c_milhar                   (abs)        000023
+_caracter_lcd               text50       0079B4
+_centena                    (abs)        000020
+_comando_lcd                text58       0079A6
+_d_bilhar                   (abs)        000021
+_d_milhar                   (abs)        000024
+_dezena                     (abs)        000027
+_envia_dados_lcd            text59       005344
+_escrever_eeprom            text35       00783C
+_exit                       init         000028
+_inicializa_lcd             text38       00561E
+_inicializa_sistema         text28       00266C
+_ler_eeprom                 text31       007876
+_limpa_lcd                  text54       00790A
+_linha1_lcd                 text53       00798E
+_linha2_lcd                 text51       007976
+_main                       text0        000B28
+_my_isr                     text68       001AAA
+_my_isr$1618                param4       000436
+_my_isr$1619                param4       00043A
+_my_isr$1620                param4       00043E
+_my_isr$1621                param4       00041B
+_my_isr$1622                param4       00041E
+_my_isr$1623                param4       000421
+_my_isr$1624                param4       000424
+_my_isr$1625                param4       000427
+_my_isr$1626                param4       00042A
+_my_isr$1627                param4       00042D
+_my_isr$1628                param4       000430
+_my_isr$1629                param4       000433
+_my_isr_low                 text61       00009A
+_old_B1                     (abs)        000003
+_old_B2                     (abs)        000004
+_old_B3                     (abs)        000005
+_old_B4                     (abs)        000006
+_p                          (abs)        000003
+_separa_unidades            text44       002E58
+_separa_unidades_SZ         text49       0020EC
+_texto_lcd                  text33       0077BE
+_u_bilhar                   (abs)        000028
+_u_milhar                   (abs)        000025
+_unidade                    (abs)        000026
+_xy_lcd                     text34       007584
+caracter_lcd@c              param4       00040C
+comando_lcd@c               param4       00040D
+config_word1                config       300000
+config_word2                config       300002
+config_word3                config       300004
+config_word4                config       300006
+envia_dados_lcd@dado        param4       00040E
+envia_dados_lcd@nibbleH     param4       00040F
+envia_dados_lcd@nibbleL     param4       000410
+escrever_eeprom@DADO_EEPROM param4       000405
+escrever_eeprom@address     param4       000403
+i1Delay_Us@Us               param4       000487
+i1VALOR_ADC@ADC             param4       00047F
+i1VALOR_ADC@CH              param4       00047B
+i1_Delay_Us                 text67       007956
+i1_VALOR_ADC                text65       00671C
+i1___aldiv                  text63       004AE8
+i1___aldiv@counter          param4       000483
+i1___aldiv@dividend         param4       00047B
+i1___aldiv@divisor          param4       00047F
+i1___aldiv@quotient         param4       000485
+i1___aldiv@sign             param4       000484
+i1___lmul                   text62       00713C
+i1___lmul@multiplicand      param4       00047F
+i1___lmul@multiplier        param4       00047B
+i1___lmul@product           param4       000483
+i1___lwdiv                  text66       006DDA
+i1___lwdiv@counter          param4       00047F
+i1___lwdiv@dividend         param4       00047B
+i1___lwdiv@divisor          param4       00047D
+i1___lwdiv@quotient         param4       000480
+i1___wmul                   text64       007394
+i1___wmul@multiplicand      param4       00047D
+i1___wmul@multiplier        param4       00047B
+i1___wmul@product           param4       00047F
+i2___aldiv                  text77       004924
+i2___aldiv@counter          param4       000459
+i2___aldiv@dividend         param4       000451
+i2___aldiv@divisor          param4       000455
+i2___aldiv@quotient         param4       00045B
+i2___aldiv@sign             param4       00045A
+i2___lmul                   text76       006FF4
+i2___lmul@multiplicand      param4       000455
+i2___lmul@multiplier        param4       000451
+i2___lmul@product           param4       000459
+i2___wmul                   text72       0073FA
+i2___wmul@multiplicand      param4       000453
+i2___wmul@multiplier        param4       000451
+i2___wmul@product           param4       000455
+inicializa_sistema@ADC_MAP  param4       000402
+inicializa_sistema@CONT     param4       000401
+int_func                    intcode      000008
+int_funclo                  intcodelo    000018
+intlevel0                   text         0079C2
+intlevel1                   text         0079C2
+intlevel2                   text         0079C2
+intlevel3                   text         0079C2
+ler_eeprom@DADO_EEPROM      param4       000407
+ler_eeprom@address          param4       000405
+separa_unidades@Valor       param4       000403
+separa_unidades_SZ@Valor    param4       000403
+start                       init         000028
+texto_lcd@s                 param4       000403
+xy_lcd@coluna               param4       000404
+xy_lcd@endereco             param4       000405
+xy_lcd@linha                param4       000403

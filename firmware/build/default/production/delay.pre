@@ -1,0 +1,23 @@
+
+# 1 "delay.c"
+
+# 15 "delay.h"
+void Delay_Us(unsigned int Us);
+
+void Delay_Ms(unsigned int Ms);
+
+# 21 "delay.c"
+void Delay_Us(unsigned int Us)
+{
+while(Us){Us--;}
+
+return;
+}
+
+
+
+void Delay_Ms(unsigned int Ms)
+{
+while(Ms){Ms--; Delay_Us(720);}
+return;
+}

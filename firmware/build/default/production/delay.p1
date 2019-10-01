@@ -1,0 +1,54 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;delay.h: 15: void Delay_Us(unsigned int Us);
+[; ;delay.h: 17: void Delay_Ms(unsigned int Ms);
+"22 delay.c
+[v _Delay_Us `(v 1 ef1`ui ]
+{
+[; ;delay.c: 21: void Delay_Us(unsigned int Us)
+[; ;delay.c: 22: {
+[e :U _Delay_Us ]
+[v _Us `ui 1 r1 ]
+[f ]
+[; ;delay.c: 23: while(Us){Us--;}
+"23
+[e $U 2  ]
+[e :U 3 ]
+{
+[e -- _Us -> -> 1 `i `ui ]
+}
+[e :U 2 ]
+[e $ != _Us -> -> 0 `i `ui 3  ]
+[e :U 4 ]
+[; ;delay.c: 25: return;
+"25
+[e $UE 1  ]
+[; ;delay.c: 26: }
+"26
+[e :UE 1 ]
+}
+"31
+[v _Delay_Ms `(v 1 ef1`ui ]
+{
+[; ;delay.c: 30: void Delay_Ms(unsigned int Ms)
+[; ;delay.c: 31: {
+[e :U _Delay_Ms ]
+[v _Ms `ui 1 r1 ]
+[f ]
+[; ;delay.c: 32: while(Ms){Ms--; Delay_Us(720);}
+"32
+[e $U 6  ]
+[e :U 7 ]
+{
+[e -- _Ms -> -> 1 `i `ui ]
+[e ( _Delay_Us (1 -> -> 720 `i `ui ]
+}
+[e :U 6 ]
+[e $ != _Ms -> -> 0 `i `ui 7  ]
+[e :U 8 ]
+[; ;delay.c: 33: return;
+"33
+[e $UE 5  ]
+[; ;delay.c: 34: }
+"34
+[e :UE 5 ]
+}
