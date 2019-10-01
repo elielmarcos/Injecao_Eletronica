@@ -8,7 +8,7 @@ Controle PID para o tempo de abertura dos injetores.
 
 Speedy-Density.
 
-Combústivel Álcool ou Gasolina.
+Combustível Álcool ou Gasolina.
 
 Controle de temperatura.
 
